@@ -10,7 +10,7 @@ import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter @Setter
+@Getter
 @Entity
 @Table(name = "journey_paths")
 public class JourneyPath extends BaseEntity{
@@ -20,7 +20,7 @@ public class JourneyPath extends BaseEntity{
     private int duration;
     private int cost;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "journey_path_schedule",
             joinColumns = {@JoinColumn(name = "journey_path_id")},

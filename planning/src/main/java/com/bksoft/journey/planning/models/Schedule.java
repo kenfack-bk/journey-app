@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "schedules")
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
+@Getter @NoArgsConstructor @AllArgsConstructor
 public class Schedule extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private DayOfWeek dayOfWeek;
